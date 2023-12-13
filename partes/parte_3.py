@@ -1,7 +1,7 @@
 import json
 import PySimpleGUI as sg
 
-def pag_3(cur, id, objetivo, path):
+def parte_3(cur, id, objetivo, path):
     with open(path, 'r') as f:
         novo_caso = json.load(f)
 

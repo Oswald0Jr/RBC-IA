@@ -1,8 +1,8 @@
 import json
 import PySimpleGUI as sg
-from paginas.pag_2 import pag_2
+from partes.parte_2 import parte_2
 
-def pag_1():
+def parte_1():
     area_damaged = ["Areas baixas", "Espalhado", "Campo inteiro", "Areas superiores", "Desconhecido"]
 
     canker_lesion = ["Bronzeado a marrom", "Marrom", "Marrom escuro", "Desconhecido"]
@@ -162,7 +162,7 @@ def pag_1():
             # Salva o cnf minimo
             cnf = values['cnf_min']
             window.disappear()
-            retorno = pag_2(cnf)
+            retorno = parte_2(cnf)
             if retorno != 0:
                 break
             window.reappear()

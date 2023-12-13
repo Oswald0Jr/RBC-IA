@@ -4,7 +4,7 @@ import sys
 from dotenv import load_dotenv
 import json
 import PySimpleGUI as sg
-from paginas.pag_3 import pag_3
+from partes.parte_3 import parte_3
 
 # importa a funcao de calculo do arquivo conexao.py
 
@@ -19,7 +19,7 @@ load_dotenv()
 #Conecta com o banco de dados
 conexao = psycopg2.connect(database = 'RBC', host = 'localhost', user= 'postgres', password = 'admin123', port = 5432)
 
-def pag_2(cnf):
+def parte_3(cnf):
     toprow = ['ID', 'Objetivo', 'Simlaridade']
     rows = []
     
@@ -97,7 +97,7 @@ def pag_2(cnf):
                 sg.popup('Selecione um caso para continuar', title='Erro')
                 continue
             id = rows[values['-TABLE-'][0]]
-            teste = pag_3(cur, id[0], opcoes_objetivo, 'novo_caso.json')
+            teste = parte_3(cur, id[0], opcoes_objetivo, 'novo_caso.json')
             if teste == 1:
                 conexao.commit()
                 break
