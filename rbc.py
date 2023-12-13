@@ -1,10 +1,7 @@
-#instale o PySimpleGUI antes de rodar este arquivo:
-# para mac/linux
-# pip3 install PySimpleGUI
 import PySimpleGUI as sg
 from partes import parte_1
 
-sg.theme('Reddit')
+sg.theme('LightBrown6')
 
 def pag_inicial():
     buttons = [
@@ -13,12 +10,13 @@ def pag_inicial():
     ]
 
     layout = [
-        [sg.Text('Bem vindo ao sistema de recomendação de produtos para o controle de doenças em plantações!', font=('Arial Bold',13), justification='center')],
-        [sg.Text('')],
+        [sg.Text('Olá, seja bem vindo!', font=('Times New Roman',12), justification='center')],
+        [sg.Text('Esse é um sistema de raciocinio baseado em casos (RBC) feito em python!', font=('Times New Roman', 12), justification='center')],
         [sg.Column(buttons, element_justification='right', expand_x=True)]
     ]
 
-    window = sg.Window('Sistema de Recomendação', layout)
+    window = sg.Window('Sistema RBC', layout)
+
 
     while True:
         event, values = window.read()

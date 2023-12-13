@@ -1,14 +1,15 @@
 import psycopg2
-import os
 from dotenv import load_dotenv
 import json
 
 load_dotenv()
 
-# #Conecta com o banco de dados
-conexao = psycopg2.connect(database = 'RBC', host = 'localhost', user= 'postgres', password = 'admin123', port = 5432)
+#Conexao com o banco
+conexao = psycopg2.connect(database = "RBC", host ="localhost", user= "postgres", password = "admin123", port = "5432")
 
+#Funcao para calcular a similaridade global do novo caso
 def similaridade_global(conexao, cur, path):
+    
     #Abre o arquivo do novo_caso
     with open(path, 'r') as f:
         novo_caso = json.load(f)
@@ -100,10 +101,8 @@ def similaridade_global(conexao, cur, path):
                     break
             somaSimilaridade += similaridade_local_dic[key][i+1]*float(aux[1])
 
-            # print(f"Similaridade Local {key}: {similaridade_local[key][i+1]}*{float(aux[1])} = {similaridade_local[key][i+1]*float(aux[1])}")
-        
         similaridade_global_dic[i+1] = somaSimilaridade/somaPesos
-
+    print(similaridade_global_dic)
 
 
     return similaridade_global_dic

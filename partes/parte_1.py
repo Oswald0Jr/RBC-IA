@@ -78,59 +78,97 @@ def parte_1():
     sz2 = (15, 0)
 
     col1 = [
-        # Transforma todos os sg.combo readonly=True
-        [sg.Text('Área danificada', size=sz1,background_color='light grey'), sg.Combo(area_damaged, key='area_damaged', size=sz2, readonly=True)],
-        [sg.Text('Lesão de cancro', size=sz1,background_color='light grey'), sg.Combo(canker_lesion, key='canker_lesion', size=sz2, readonly=True)],
-        [sg.Text('Histórico da cultura', size=sz1,background_color='light grey'), sg.Combo(crop_hist, key='crop_hist', size=sz2, readonly=True)],
-        [sg.Text('Data', size=sz1,background_color='light grey'), sg.Combo(date, key='date', size=sz2, readonly=True)],
-        [sg.Text('Decaimento externo', size=sz1,background_color='light grey'), sg.Combo(external_decay, key='external_decay', size=sz2, readonly=True)],
-        [sg.Text('Descoloração interna', size=sz1,background_color='light grey'), sg.Combo(int_discolor, key='int_discolor', size=sz2, readonly=True)],
-        [sg.Text('Malformação de folhas', size=sz1,background_color='light grey'), sg.Combo(leaf_malf, key='leaf_malf', size=sz2, readonly=True)],
-        [sg.Text('Manchas foliares',size=sz1,background_color='light grey'), sg.Combo(leaf_mild, key='leaf_mild',size=sz2, readonly=True)],
-        [sg.Text('Rasgo de folhas',size=sz1,background_color='light grey'), sg.Combo(leaf_shread, key='leaf_shread',size=sz2, readonly=True)],
-        [sg.Text('Halo de manchas foliares',size=sz1,background_color='light grey'), sg.Combo(leafspots_halo, key='leafspots_halo',size=sz2, readonly=True)],
-        [sg.Text('Micélio',size=sz1,background_color='light grey'), sg.Combo(mycelium, key='mycelium',size=sz2, readonly=True)],
-        [sg.Text('Crescimento da planta',size=sz1,background_color='light grey'), sg.Combo(plant_growth, key='plant_growth',size=sz2, readonly=True)],
-        [sg.Text('Precipitado',size=sz1,background_color='light grey'), sg.Combo(precip, key='precip',size=sz2, readonly=True)],
-        [sg.Text('Raízes',size=sz1,background_color='light grey'), sg.Combo(roots, key='roots',size=sz2, readonly=True)],
-        [sg.Text('Murchando', size=sz1,background_color='light grey'), sg.Combo(shriveling, key='shriveling', size=sz2, readonly=True)],
-        [sg.Text('Caule', size=sz1,background_color='light grey'), sg.Combo(stem, key='stem', size=sz2, readonly=True)],
-        [sg.Text('Temperatura', size=sz1,background_color='light grey'), sg.Combo(temp, key='temp', size=sz2, readonly=True)]
+        [sg.Text('Área danificada', size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(area_damaged, key='area_damaged', size=sz2, readonly=True)],
+        [sg.Text('Lesão de cancro', size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12) ), 
+         sg.Combo(canker_lesion, key='canker_lesion', size=sz2, readonly=True)],
+        [sg.Text('Histórico da cultura', size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(crop_hist, key='crop_hist', size=sz2, readonly=True)],
+        [sg.Text('Data', size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(date, key='date', size=sz2, readonly=True)],
+        [sg.Text('Decaimento externo', size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(external_decay, key='external_decay', size=sz2, readonly=True)],
+        [sg.Text('Descoloração interna', size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(int_discolor, key='int_discolor', size=sz2, readonly=True)],
+        [sg.Text('Malformação de folhas', size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(leaf_malf, key='leaf_malf', size=sz2, readonly=True)],
+        [sg.Text('Manchas foliares',size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(leaf_mild, key='leaf_mild',size=sz2, readonly=True)],
+        [sg.Text('Rasgo de folhas',size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(leaf_shread, key='leaf_shread',size=sz2, readonly=True)],
+        [sg.Text('Halo de manchas foliares',size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(leafspots_halo, key='leafspots_halo',size=sz2, readonly=True)],
+        [sg.Text('Micélio',size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(mycelium, key='mycelium',size=sz2, readonly=True)],
+        [sg.Text('Crescimento da planta',size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(plant_growth, key='plant_growth',size=sz2, readonly=True)],
+        [sg.Text('Precipitado',size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(precip, key='precip',size=sz2, readonly=True)],
+        [sg.Text('Raízes',size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(roots, key='roots',size=sz2, readonly=True)],
+        [sg.Text('Murchando', size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(shriveling, key='shriveling', size=sz2, readonly=True)],
+        [sg.Text('Caule', size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(stem, key='stem', size=sz2, readonly=True)],
+        [sg.Text('Temperatura', size=sz1,background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(temp, key='temp', size=sz2, readonly=True)],
+        [sg.Text('Manchas de frutas', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(fruit_spots, key='fruit_spots', size=sz2, readonly=True)],
     ]
-
     col2 = [
-        [sg.Text('Manchas de frutas', size=sz1,background_color='light grey'), sg.Combo(fruit_spots, key='fruit_spots', size=sz2, readonly=True)],
-        [sg.Text('Corpos de frutificação', size=sz1,background_color='light grey'), sg.Combo(fruiting_bodies, key='fruiting_bodies', size=sz2, readonly=True)],
-        [sg.Text('Vagens de frutas', size=sz1,background_color='light grey'), sg.Combo(fruit_pods, key='fruit_pods', size=sz2, readonly=True)],
-        [sg.Text('Germinação', size=sz1,background_color='light grey'), sg.Combo(germination, key='germination', size=sz2, readonly=True)],
-        [sg.Text('Granizo', size=sz1,background_color='light grey'), sg.Combo(hail, key='hail', size=sz2, readonly=True)],
-        [sg.Text('Tamanho das manchas foliares', size=sz1,background_color='light grey'), sg.Combo(leafspot_size, key='leafspot_size', size=sz2, readonly=True)],
-        [sg.Text('Margem das manchas foliares', size=sz1,background_color='light grey'), sg.Combo(leafspot_marg, key='leafspot_marg', size=sz2, readonly=True)],
-        [sg.Text('Folhas', size=sz1,background_color='light grey'), sg.Combo(leaves, key='leaves', size=sz2, readonly=True)],
-        [sg.Text('Lodging', size=sz1,background_color='light grey'), sg.Combo(lodging, key='lodging', size=sz2, readonly=True)],
-        [sg.Text('Crescimento de mofo', size=sz1,background_color='light grey'), sg.Combo(mold_growth, key='mold_growth', size=sz2, readonly=True)],
-        [sg.Text('Esclerócio', size=sz1,background_color='light grey'), sg.Combo(sclerotia, key='sclerotia', size=sz2, readonly=True)],
-        [sg.Text('Semente', size=sz1,background_color='light grey'), sg.Combo(seed, key='seed', size=sz2, readonly=True)],
-        [sg.Text('Descoloração da semente', size=sz1,background_color='light grey'), sg.Combo(seed_discolor, key='seed_discolor', size=sz2, readonly=True)],
-        [sg.Text('Tamanho da semente', size=sz1,background_color='light grey'), sg.Combo(seed_size, key='seed_size', size=sz2, readonly=True)],
-        [sg.Text('Seed Tmt', size=sz1,background_color='light grey'), sg.Combo(seed_tmt, key='seed_tmt', size=sz2, readonly=True)],
-        [sg.Text('Severidade', size=sz1,background_color='light grey'), sg.Combo(severity, key='severity', size=sz2, readonly=True)],
-        [sg.Text('Suporte para plantas', size=sz1,background_color='light grey'), sg.Combo(plant_stand, key='plant_stand', size=sz2, readonly=True)],
-        [sg.Text('Cancro no caule', size=sz1,background_color='light grey'), sg.Combo(stem_cankers, key='stem_cankers', size=sz2, readonly=True)],
-    ]
-
+        [sg.Text('Corpos de frutificação', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(fruiting_bodies, key='fruiting_bodies', size=sz2, readonly=True)],
+        [sg.Text('Vagens de frutas', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(fruit_pods, key='fruit_pods', size=sz2, readonly=True)],
+        [sg.Text('Germinação', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(germination, key='germination', size=sz2, readonly=True)],
+        [sg.Text('Granizo', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(hail, key='hail', size=sz2, readonly=True)],
+        [sg.Text('Tamanho das manchas foliares', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(leafspot_size, key='leafspot_size', size=sz2, readonly=True)],
+        [sg.Text('Margem das manchas foliares', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(leafspot_marg, key='leafspot_marg', size=sz2, readonly=True)],
+        [sg.Text('Folhas', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(leaves, key='leaves', size=sz2, readonly=True)],
+        [sg.Text('Lodging', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(lodging, key='lodging', size=sz2, readonly=True)],
+        [sg.Text('Crescimento de mofo', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(mold_growth, key='mold_growth', size=sz2, readonly=True)],
+        [sg.Text('Esclerócio', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(sclerotia, key='sclerotia', size=sz2, readonly=True)],
+        [sg.Text('Semente', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)), 
+         sg.Combo(seed, key='seed', size=sz2, readonly=True)],
+        [sg.Text('Descoloração da semente', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(seed_discolor, key='seed_discolor', size=sz2, readonly=True)],
+        [sg.Text('Tamanho da semente', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(seed_size, key='seed_size', size=sz2, readonly=True)],
+        [sg.Text('Seed Tmt', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(seed_tmt, key='seed_tmt', size=sz2, readonly=True)],
+        [sg.Text('Severidade', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(severity, key='severity', size=sz2, readonly=True)],
+        [sg.Text('Suporte para plantas', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(plant_stand, key='plant_stand', size=sz2, readonly=True)],
+        [sg.Text('Cancro no caule', size=sz1, background_color='#B2CBB0', font=('Times New Roman', 12)),
+         sg.Combo(stem_cankers, key='stem_cankers', size=sz2, readonly=True)],
+        ]
+    
 
     next_button= [
         [sg.Button('Proximo')],
     ]
 
     layout = [
-        [sg.Text('Caso Problema:'), sg.Text()],
-        [sg.Column(col1), sg.Column(col2)], [sg.Text('CNF  Minima:'), sg.Spin([i for i in range(1, 101)], initial_value=75, key='cnf_min', size=(5, 1))],
+        [sg.Text('Novo caso:', font=('Times New Roman', 12)), sg.Text()],
+        [sg.Text('Selecione as caracteristicas presentes no caso', font=('Times New Roman', 12)), sg.Text()],
+        [sg.Column(col1), sg.Column(col2)], [sg.Text('Similaridade Minima:',background_color='#B2CBB0', font=('Times New Roman', 12)), sg.Spin([i for i in range(1, 101)], initial_value=75, key='cnf_min', size=(5, 1))],
         [sg.Column(next_button, element_justification='right', expand_x=True)],
     ]
+    
 
-    window = sg.Window('Cadastro de Produtos', layout)
+    scrollable_layout = [
+        [sg.Column(layout, scrollable=True, vertical_scroll_only=False,size=(800,600))]
+    ]
+    window = sg.Window('Cadastro de Caso', scrollable_layout)
 
     # Cria um dicionario armazenar os valores do novo caso
     novo_caso = {}
@@ -147,12 +185,11 @@ def parte_1():
 
         elif event == 'Proximo':
             novo_caso = values.copy()
-            # Transforma os valores nulos em "Desconhecido"
+            # Transforma nulo em Desconhecido
             for key in novo_caso:
                 if novo_caso[key] == '':
                     novo_caso[key] = "Desconhecido"
-    
-            # drop cnf_min do novo_caso
+
             novo_caso.pop('cnf_min')
 
             # Salva o novo caso em um arquivo json
@@ -168,10 +205,6 @@ def parte_1():
             window.reappear()
 
     window.close()
-
-
-    # for key in novo_caso:
-    #     novo_caso[key] = similaridade[key][novo_caso[key]]
 
     
 
